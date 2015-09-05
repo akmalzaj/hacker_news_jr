@@ -14,8 +14,12 @@
 </div>
 
 <div class="container">
+<%= @msg %>
   <h5>Login</h5>
-  <form action="/">
+  <form action="/hacker_news" method="post">
+
+   <% return @login_errors if @login_errors.nil? %>
+
     <div class="row">
       <div class="input-field col s12">
         <label for="username" class="active">Username</label>
@@ -35,7 +39,10 @@
 <br>
 <div class="container">
   <h5>Create Account</h5>
-  <form action="/">
+  <form action="/signup" method="post">
+
+     <% return @signup_errors if @signup_errors.nil? %>
+    
     <div class="row">
       <div class="input-field col s12">
         <label for="username" class="active">Username</label>
