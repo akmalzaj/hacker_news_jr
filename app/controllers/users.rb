@@ -19,8 +19,8 @@ post '/hacker_news' do
 		session[:user_id] = @user.id
 		redirect '/hacker_news'
 	else
+	redirect '/login'
 	@login_errors = "Authentication failed. Check your details and try again"
-	redirect 'login'
 	end
 end
 

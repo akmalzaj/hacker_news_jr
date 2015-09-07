@@ -6,19 +6,20 @@
         <li><a href="/">Back</a></li>
       </ul>
       <ul id="side-menu" class="side-nav">
-      <li><a href="/">BACK</a></li>
-    </ul>
+      	<li><a href="/">BACK</a></li>
+   		</ul>
     <a href="/" data-activates="side-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
   </nav>
 </div>
+
 
 <div class="container">
 <%= @msg %>
   <h5>Login</h5>
   <form action="/hacker_news" method="post">
 
-   <% return @login_errors if @login_errors.nil? %>
+   <%= @login_errors %>
 
     <div class="row">
       <div class="input-field col s12">
@@ -37,11 +38,13 @@
   </form>
 </div>
 <br>
+
+
 <div class="container">
   <h5>Create Account</h5>
   <form action="/signup" method="post">
 
-     <% return @signup_errors if @signup_errors.nil? %>
+     <%= @signup_errors if @signup_errors.nil? %>
     
     <div class="row">
       <div class="input-field col s12">
